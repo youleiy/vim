@@ -44,9 +44,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'bronson/vim-trailing-whitespace'
 
 "生成索引
-Plugin 'vim-scripts/cscope.vim'
-Plugin 'vim-scripts/cscope_dynamic'
-Plugin 'vim-scripts/ctags.vim'
+"Plugin 'vim-scripts/cscope.vim'
+"Plugin 'vim-scripts/cscope_dynamic'
+"Plugin 'vim-scripts/ctags.vim'
 "-------------
 " Other Utils
 "-------------

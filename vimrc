@@ -73,7 +73,7 @@ syntax enable
 set t_Co=256
 " color scheme
 set background=dark
-color solarized
+"color solarized
 "color monokai
 "colors Tomorrow-Night-Eighties
 set guifont=Tsentsiu\ Mono\ HG\ 16
@@ -100,9 +100,10 @@ set matchtime=2
 set number
 " 高亮显示当前行/列
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 " 高亮显示搜索结果
 set hlsearch
+hi CursorLine   cterm=NONE ctermbg=gray ctermfg=white guibg=darkred guifg=white
 
 " 显示行号
 set number
@@ -239,8 +240,8 @@ nmap <F5> :TagbarToggle<cr>
 nmap <F6> :NERDTreeToggle<cr>
 nmap <F3> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
-nmap <C-F11> :!cscope -bRq<cr>
-nmap <C-F12> :!ctags -R --c-kinds=+l+x+p --fields=+lS -I __THROW,__nonnull --extra=+ .<cr>
+" nmap <C-F11> :!cscope -bRq<cr>
+"nmap <C-F12> :!ctags -R --c-kinds=+l+x+p --fields=+lS -I __THROW,__nonnull --extra=+ .<cr>
 
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *
@@ -272,47 +273,6 @@ nmap hi IH
 
 " c.vim 默认不需要具体配置
 
-" cscope.vim
-if has('cscope')
-    set cscopetag
-    set csto=0
-    set cscopeverbose
-
-    cnoreabbrev csa cs add
-    cnoreabbrev csf cs find
-    cnoreabbrev csfs cs find s
-    cnoreabbrev csfc cs find c
-    cnoreabbrev csfe cs find e
-    cnoreabbrev csft cs find t
-    cnoreabbrev csfd cs find d
-    cnoreabbrev csfi cs find i
-    cnoreabbrev csfg cs find g
-    cnoreabbrev csk cs kill
-    cnoreabbrev csr cs reset
-    cnoreabbrev css cs show
-    cnoreabbrev csh cs help
-
-    cnoreabbrev cs cs find s <cword>
-    cnoreabbrev cc cs find c <cword>
-    cnoreabbrev ce cs find e <cword>
-    cnoreabbrev ct cs find t <cword>
-    cnoreabbrev cd cs find d <cword>
-    cnoreabbrev ci cs find i ^<cfile>$
-    cnoreabbrev cg cs find g <cword>
-    cnoreabbrev cf cs find f <cword>
-
-    nnoremap <C-s>s :cs find s <cword><CR>
-    nnoremap <C-s>g :cs find g <cword><CR>
-    nnoremap <C-s>c :cs find c <cword><CR>
-    nnoremap <C-s>t :cs find t <cword><CR>
-    nnoremap <C-s>e :cs find e <cword><CR>
-    nnoremap <C-s>f :cs find f <cfile><CR>
-    nnoremap <C-s>i :cs find i ^<cfile>$<CR>
-    nnoremap <C-s>d :cs find d <cword><CR>
-endif
-
-" ctags.vim
-" ctags -R --c-kinds=+l+x+p --fields=+lS -I __THROW,__nonnull
 
 " ctrlp.vim 快速文件查找
 " 支持正则查询
