@@ -82,7 +82,7 @@ if has('gui_running')
 else
 	colorscheme zenburn
 endif
-set guifont=Andale\ Mono\ 14 
+set guifont=mononoki\ 14 
 
 """""""""""""""""""""""""""""""""""""""""
 " 代码查看配置
@@ -219,8 +219,8 @@ set confirm
 let mapleader=";"
 
 " 定义快捷键到行首和行尾
-nmap LB 0
-nmap LE $
+"nmap LB 0
+"nmap LE $
 
 " 定义git grep 快捷键
 cnoreabbrev grep !git grep
