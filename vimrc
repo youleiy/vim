@@ -26,7 +26,7 @@ set history=1000
 " vim控制配置
 """""""""""""""""""""""""""""""""""""""""
 " 使用鼠标模式
-set mouse=a
+"set mouse=a
 " 在title bar显示文件名
 set title
 " 总是显示状态栏
@@ -60,7 +60,7 @@ autocmd VimEnter * call ToggleFullscreen()
 
 " 设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制, 不需要可以去掉
 " 好处：误删什么的，如果以前屏幕打开，可以找回
-set t_ti= t_te=
+"set t_ti= t_te=
 
 """""""""""""""""""""""""""""""""""""""""
 " 内容显示配置
@@ -72,11 +72,17 @@ syntax enable
 " 告诉vim terminal支持 256 colors
 set t_Co=256
 " color scheme
-set background=dark
+" set background=dark
 "color solarized
 "color monokai
 "colors Tomorrow-Night-Eighties
-set guifont=Tsentsiu\ Mono\ HG\ 16
+if has('gui_running')
+	set background=dark
+	colorscheme solarized
+else
+	colorscheme zenburn
+endif
+set guifont=Andale\ Mono\ 14 
 
 """""""""""""""""""""""""""""""""""""""""
 " 代码查看配置
@@ -103,7 +109,7 @@ set cursorline
 "set cursorcolumn
 " 高亮显示搜索结果
 set hlsearch
-hi CursorLine   cterm=NONE ctermbg=gray ctermfg=white guibg=darkred guifg=white
+"hi CursorLine   cterm=NONE ctermbg=magenta ctermfg=white guibg=darkred guifg=white
 
 " 显示行号
 set number

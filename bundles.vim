@@ -69,6 +69,7 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'sickill/vim-monokai'
+Plugin 'jnurmine/Zenburn'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
