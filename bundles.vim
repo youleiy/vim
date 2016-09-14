@@ -23,7 +23,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-scripts/Smart-Tabs'
 
 "为buff自动创建不存在的目录
-Plugin 'pbrisbin/vim-mkdir'
+"Plugin 'pbrisbin/vim-mkdir'
 
 "--------------
 " IDE features
@@ -69,6 +69,7 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'sickill/vim-monokai'
+Plugin 'tomasr/molokai'
 Plugin 'jnurmine/Zenburn'
 
 Plugin 'vim-airline/vim-airline'
