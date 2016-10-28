@@ -45,8 +45,8 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 " 禁止显示菜单和工具条
-set guioptions-=m
-set guioptions-=T
+"set guioptions-=m
+"set guioptions-=T
 
 " 将外部命令 wmctrl 控制窗口最大化的命令行参数封装成一个 vim 的函数
 " yum install wmctrl
@@ -80,7 +80,9 @@ if has('gui_running')
 	set background=dark
 	colorscheme solarized
 else
+	set background=dark
 	colorscheme monokai 
+	"colorscheme solarized	
 endif
 set guifont=mononoki\ 14 
 
@@ -380,7 +382,12 @@ let g:tagbar_type_cpp = {
 \ }
 
 " airline
-let g:airline_theme='base16_solarized'
+"let g:airline_theme='base16_solarized'
+if has('gui_running')
+	let g:airline_theme='base16_solarized'
+else
+	let g:airline_theme='base16_monokai'
+endif
 let g:airline_detect_modified=1
 let g:airline_detect_paste=1
 let g:airline_inactive_collapse=0

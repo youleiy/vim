@@ -75,6 +75,8 @@ Plugin 'jnurmine/Zenburn'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'davidhalter/jedi-vim'
+
 " 插件列表结束
 call vundle#end()
 filetype plugin indent on
